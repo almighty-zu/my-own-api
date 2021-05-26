@@ -1,19 +1,17 @@
 {
-"scripts": {
-    "start": "nodemon server.js"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "4.17.1",
+    "heroku": "^7.54.0",
     "uuid": "^8.3.2"
   },
   "name": "my-own-api",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/almighty-zu/my-own-api.git"
