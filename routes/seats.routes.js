@@ -24,8 +24,12 @@ router.route("/seats").post((req, res) => {
   newRecord.client = client;
   newRecord.email = email;
   newRecord.day = day;
-  seats.push(newRecord);
-  res.json({ message: "OK" });
+  if(db.seats.some(chosenSeat => (chosenSeat.day == req.body.day && chosenSeat.seat == req.body.seat))) {
+    return res.status(404).json({message: 'This seat is taken'});
+  } else {
+    db.seats.push(seat);
+    return res.json(db.seats);
+  }
 });
 
 router.route("/seats/:id").put((req, res) => {
